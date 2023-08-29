@@ -1,5 +1,3 @@
-import Account from '../interfaces/Account';
-
 export const testUser = {
   id: 777,
   firstName: 'Sean',

@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { AuthenticationGuard } from '../utils/AuthenticationGuard';
-import SignInLayout from '../../components/Layout/SignInLayout';
-import { RootLayout } from '../../components/Layout/RootLayout';
-import DashboardLayout from '../../components/Layout/DashboardLayout';
-import CallbackLayout from '../../components/Layout/CallbackLayout';
+import { RootLayout, SignInLayout, CallbackLayout, DashboardLayout } from '../components/Layout';
 // import { useAuth } from "@/lib/auth";
 
 // import { protectedRoutes } from "./protected";
