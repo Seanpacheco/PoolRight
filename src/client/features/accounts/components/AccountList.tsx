@@ -6,9 +6,11 @@ import AccountCard from './AccountCards';
 import { useQuery } from '@tanstack/react-query';
 import { getAccounts } from '../api/getAccounts';
 import { Account } from '../types';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function AccountList() {
-  const { data: accounts, error, isLoading } = useQuery(['accounts'], getAccounts);
+  const auth = useAuth0();
+  const { data: accounts, error, isLoading } = useQuery(['accounts'], () => getAccounts(auth));
 
   const [selectedIndex, setSelectedIndex] = React.useState<number>(0.1);
   const [filteredList, setFilteredList] = React.useState(accounts?.data);

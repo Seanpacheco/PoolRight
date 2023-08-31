@@ -11,6 +11,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
     // Make sure it's always the last config, so it gets the chance to override other configs.
     'eslint-config-prettier',
@@ -31,6 +32,8 @@ module.exports = {
   },
   rules: {
     // Add your own rules here to override ones from the extended configs.
+    '@tanstack/query/exhaustive-deps': 'error',
+    '@tanstack/query/prefer-query-object-syntax': 'error',
     'no-restricted-imports': [
       'error',
       {
